@@ -66,16 +66,18 @@ cardArray.sort(() =>  0.5 - Math.random());
 const gridDisplay = document.querySelector('#grid');
 /*.querySelector() search into the document for the elm that has id as grid -> capture it in the const.*/
 
-//4.1.Create an image for each card we need.
+//4.1.Create an image for each card we need & place it in the grid.
 
     function createBoard() {
         for( let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img');
             /*.createElement does what the name says. The element type is defined in the param of the method*/
-            card.setAttribute('src', 'cardArray.image');
+            card.setAttribute('src', './Images/blank.png');
+            //The back of the cards is the img blank.
             card.setAttribute('data-id', i);
-            console.log(card, i);
             //For keeping track of each img.
+            gridDisplay.appendChild(card);
+            /*.appendChild sets card node as a child (& will be contained) in grindDisplay node. NOTE:everything in html is a node.*/
         }
     };
 
