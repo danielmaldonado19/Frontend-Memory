@@ -1,0 +1,7 @@
+#grid { 
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    /*Sets the elms to be force to continue in the next line if they doesnt fit in one line.*/
+}
