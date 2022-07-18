@@ -92,6 +92,9 @@ const gridDisplay = document.querySelector('#grid');
         let cardId = this.getAttribute('data-id');
         /*this refers to the context we called it. In this case the context is the flipCard fn which activates itself with the element we click-> which is referred to the eventListener of the card -> So this is referred to the card.*/
         let cardName = cardArray[cardId].name;
+        /*cardArray[cardId is the obj of the cardArray located in the board we clicked -> .name is the property name of THAT card -> This way we  can know what card we clicked and access to its obj form.*/
+
+        
         console.log(cardId);
-        console.log(cardName);
+       
     }
