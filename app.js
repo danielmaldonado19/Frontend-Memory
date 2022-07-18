@@ -76,9 +76,22 @@ const gridDisplay = document.querySelector('#grid');
             //The back of the cards is the img blank.
             card.setAttribute('data-id', i);
             //For keeping track of each img.
+            card.addEventListener('click', flipCard);
+            /*This is part of step 5: here we set each card for activating a fn when user clicks it.*/
             gridDisplay.appendChild(card);
             /*.appendChild sets card node as a child (& will be contained) in grindDisplay node. NOTE:everything in html is a node. In others terms, it says card are childs of gridDisplay.*/
         }
     };
 
     createBoard();
+
+
+    //5.Create a fn which flip the card when we click it.
+
+    function flipCard() {
+        let cardId = this.getAttribute('data-id');
+        /*this refers to the context we called it. In this case the context is the flipCard fn which activates itself with the element we click-> which is referred to the eventListener of the card -> So this is referred to the card.*/
+        let cardName = cardArray[cardId].name;
+        console.log(cardId);
+        console.log(cardName);
+    }
